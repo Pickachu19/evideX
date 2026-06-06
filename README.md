@@ -16,15 +16,15 @@ digital forensics, compliance demonstrations, and portfolio/capstone evaluation.
 
 ### SOC Overview
 
-![EvideX dashboard overview](docs/assets/evidex-dashboard-overview.png)
+![EvideX dashboard overview](assets/evidex-dashboard-overview.png)
 
 ### Event Explorer
 
-![EvideX event explorer](docs/assets/evidex-dashboard-events.png)
+![EvideX event explorer](assets/evidex-dashboard-events.png)
 
 ### Verification And Configuration
 
-![EvideX verification configuration](docs/assets/evidex-dashboard-config.png)
+![EvideX verification configuration](assets/evidex-dashboard-config.png)
 
 ## Core Capabilities
 
@@ -115,7 +115,6 @@ evidex/
   security.py           Authentication and sudo log analyzers
   signing.py            Local HMAC and remote KMS signing hook
   version.py            Package version
-docs/
   assets/               Dashboard screenshots for README
 config.json             Runtime configuration
 .env.example            Environment template

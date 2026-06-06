@@ -12,7 +12,7 @@ The project is built around a simple rule:
 EvideX is designed as a strong production-style MVP for security operations,
 digital forensics, compliance demonstrations, and portfolio/capstone evaluation.
 
-## Dashboard Preview
+## Dashboard Dump
 
 ### SOC Overview
 
@@ -136,7 +136,7 @@ README.md               Project documentation
 ## Clone The Repository
 
 ```bash
-git clone <your-repository-url> evidex
+git clone https://github.com/Pickachu19/evideX
 cd evidex
 ```
 
@@ -347,15 +347,6 @@ Remote AI can help classify suspicious sequences, but it must not be treated as
 proof of integrity. EvideX audits AI findings through the fabrication detector,
 which flags unsupported certainty language and evidence mismatches.
 
-## GitHub Upload Checklist
-
-Before uploading:
-
-- Keep `.env` untracked.
-- Keep `.venv/` untracked.
-- Keep generated `__pycache__/` and `*.egg-info/` untracked.
-- Upload `README.md`, `pyproject.toml`, `config.json`, `.env.example`, `.gitignore`, `evidex/`, and `docs/assets/`.
-- Decide whether old deleted files from the previous project should remain deleted.
 
 ## Current Production Readiness
 
@@ -384,4 +375,4 @@ Remaining work before true enterprise production:
 
 ## License
 
-Add your preferred license before publishing the repository.
+This repository is under MIT License.

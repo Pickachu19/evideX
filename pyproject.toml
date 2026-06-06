@@ -1,0 +1,13 @@
+[project]
+name = "evidex"
+version = "0.1.0"
+description = "Tamper-evident log integrity, evidence chain, and compliance dashboard"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["watchdog>=3.0.0"]
+
+[project.scripts]
+evidex = "evidex.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]

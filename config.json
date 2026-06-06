@@ -1,0 +1,82 @@
+{
+  "app": {
+    "name": "EvideX",
+    "log_dir": "~/.local/state/evidex",
+    "db_path": "~/.local/state/evidex/store",
+    "log_level": "INFO"
+  },
+  "dashboard": {
+    "host": "127.0.0.1",
+    "port": 8765,
+    "auto_open": false
+  },
+  "monitor": {
+    "hash_max_bytes": 52428800,
+    "log_tail_max_bytes": 262144,
+    "baseline_verify_interval_seconds": 900,
+    "debounce_seconds": 0.2
+  },
+  "paths": [
+    {"path": "/var/log", "recursive": true, "label": "System Logs", "enabled": true},
+    {"path": "~/Documents", "recursive": true, "label": "Documents", "enabled": true},
+    {"path": "~/Desktop", "recursive": true, "label": "Desktop", "enabled": true},
+    {"path": "~/Downloads", "recursive": true, "label": "Downloads", "enabled": true},
+    {"path": "~/Pictures", "recursive": true, "label": "Pictures", "enabled": true},
+    {"path": "~/Videos", "recursive": true, "label": "Videos", "enabled": true},
+    {"path": "/etc", "recursive": true, "label": "System Config", "enabled": true},
+    {"path": "/var/www", "recursive": true, "label": "Web Server", "enabled": true},
+    {"path": "/var/log/containers", "recursive": true, "label": "Kubernetes Container Logs", "enabled": false},
+    {"path": "/var/log/pods", "recursive": true, "label": "Kubernetes Pod Logs", "enabled": false},
+    {"path": "/var/lib/docker/containers", "recursive": true, "label": "Docker Container Logs", "enabled": false}
+  ],
+  "ignore_patterns": [
+    "-journal",
+    ".xbel",
+    "dconf",
+    ".goutputstream",
+    "~",
+    ".swp",
+    ".tmp",
+    ".cache",
+    ".lock",
+    "Trash",
+    ".thumbnails",
+    ".mozilla",
+    ".config/pulse",
+    "__pycache__",
+    ".git/",
+    "log_monitor.db"
+  ],
+  "log_rules": {
+    "failed_login_patterns": ["failed password", "authentication failure"],
+    "sudo_patterns": ["sudo:"],
+    "sudo_context": "command"
+  },
+  "ai": {
+    "enabled": true,
+    "provider": "openrouter",
+    "api_key_env": "OPENAI_API_KEY",
+    "base_url_env": "OPENAI_BASE_URL",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "openai/gpt-4o-mini",
+    "timeout_seconds": 20,
+    "max_context_lines": 60,
+    "minimum_severity": "medium"
+  },
+  "siem": {
+    "enabled": false,
+    "webhook_url": "",
+    "outbox_path": "~/.local/state/evidex/siem_outbox.jsonl",
+    "timeout_seconds": 5
+  },
+  "signing": {
+    "enabled": true,
+    "provider": "local-hmac",
+    "secret_env": "LOG_INTEGRITY_SIGNING_KEY",
+    "kms_key_id": ""
+  },
+  "ebpf": {
+    "enabled": false,
+    "mode": "auto"
+  }
+}

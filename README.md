@@ -137,7 +137,7 @@ README.md               Project documentation
 
 ```bash
 git clone https://github.com/Pickachu19/evideX
-cd evidex
+cd evideX
 ```
 
 ## Install
